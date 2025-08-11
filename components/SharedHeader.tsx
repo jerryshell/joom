@@ -27,9 +27,7 @@ const SharedHeader = ({
             />
           )}
           <article className="flex flex-col gap-1 -tracking-[0.8px]">
-            <h1 className="text-neutral-800 text-3xl font-bold capitalize">
-              {title}
-            </h1>
+            <h1 className="text-neutral-800 text-3xl font-bold">{title}</h1>
             <p className="text-sm font-medium text-gray-400">{subHeader}</p>
           </article>
         </figure>

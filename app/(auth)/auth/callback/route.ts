@@ -26,7 +26,7 @@ export async function GET(request: Request) {
       await serviceRoleClient.from("profile").upsert({
         id: user!.id,
         updated_at: new Date(),
-        name: user!.user_metadata.name,
+        name: user!.user_metadata.name || user!.user_metadata.user_name,
         email: user!.user_metadata.email,
         avatar_url: user!.user_metadata.avatar_url,
       });
