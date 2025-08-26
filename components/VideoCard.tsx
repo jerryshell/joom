@@ -38,7 +38,7 @@ const VideoCard = ({
   };
 
   return (
-    <div className="border-gray-200 relative flex aspect-[16/9] w-full flex-col rounded-2xl border">
+    <div className="border-gray-200 relative flex aspect-[16/9] w-full flex-col rounded-2xl border hover:shadow-lg transition">
       <Link href={`/video/${id}`}>
         <Image
           src={cover}

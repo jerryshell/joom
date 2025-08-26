@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { createClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 
-export async function getServerClient() {
+const getServerClient = async () => {
   const cookieStore = await cookies();
 
   return createServerClient(
@@ -27,11 +27,13 @@ export async function getServerClient() {
       },
     },
   );
-}
+};
 
-export function getServiceRoleClient() {
+const getServiceRoleClient = () => {
   return createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.SUPABASE_SERVICE_ROLE_KEY!,
   );
-}
+};
+
+export { getServerClient, getServiceRoleClient };

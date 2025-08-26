@@ -1,3 +1,4 @@
+import "@/lib/supabase/serverClient";
 import {
   getServerClient,
   getServiceRoleClient,
